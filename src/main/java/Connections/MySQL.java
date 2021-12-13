@@ -126,6 +126,7 @@ public class MySQL{
 
             try{
                 Statement stmt = instance.createStatement();
+
                 // execute the delete statement
                 stmt.executeUpdate(query);
 
