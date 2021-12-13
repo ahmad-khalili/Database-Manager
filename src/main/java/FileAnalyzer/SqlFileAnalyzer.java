@@ -1,4 +1,4 @@
-package org.mmo.analyzer;
+/* package org.mmo.analyzer;
 
 import org.mmo.db.DatabaseManager;
 
@@ -34,4 +34,4 @@ public class SqlFileAnalyzer implements FileAnalyzer {
         return rowsInserted;
     }
     
-}
+} */

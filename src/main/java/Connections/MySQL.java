@@ -1,4 +1,8 @@
 package Connections;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import java.sql.*;
 
@@ -63,4 +67,89 @@ public class MySQL{
             System.out.println(ex.getMessage());
         }
     }
-}
+    //UPDATE STATEMENT(Farah)
+    public static void updateStatement(String updateStmt){
+
+    }
+
+
+
+            public void deleteRow(Integer id) {
+                String sql = "DELETE FROM tableName where id = ?";
+
+                try{
+                     PreparedStatement stmt = instance.prepareStatement(sql);
+                    // set the corresponding param
+                    stmt.setInt(1, id);
+                    // execute the delete statement
+                    stmt.executeUpdate();
+
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+
+
+
+            public void deleteColumn( String column) {
+                String query = "ALTER TABLE tableName DROP column = ?";
+                try{
+                    Statement stmt = instance.createStatement();
+                    // set the corresponding param
+                    // execute the delete statement
+                    stmt.executeUpdate(query);
+
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+
+            public void deleteTable(){
+                String sql = "DROP TABLE tableName";
+
+                try{
+                    Statement stmt = instance.createStatement();
+                    // execute the delete statement
+                    stmt.executeUpdate(sql);
+
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+
+        }
+
+        public void renameTable() throws SQLException {
+            ResultSet result = null;
+
+            String newTableName = result.getString("new_name");
+            String query= "RENAME TABLE tableName TO newTableName";
+
+            try{
+                Statement stmt = instance.createStatement();
+                // execute the delete statement
+                stmt.executeUpdate(query);
+
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+            }
+
+            public void updateTable(Integer id){
+               String query=" UPDATE tableName SET = ? = ? where id = ?" ;
+                try{
+                    Statement stmt = instance.createStatement();
+                    // execute the delete statement
+                    stmt.executeUpdate(query);
+
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+
+
+
+            }
+
+
+    }
+
+
