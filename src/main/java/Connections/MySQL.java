@@ -201,6 +201,21 @@ public class MySQL{
         }
     }
 
+    public void deleteRow(Integer id) {
+        String sql = "DELETE FROM tableName where id = ?";
+
+        try{
+            PreparedStatement stmt = instance.prepareStatement(sql);
+            // set the corresponding param
+            stmt.setInt(1, id);
+            // execute the delete statement
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public static void closeConnection() {
         if (instance != null) {
             try {
@@ -211,37 +226,8 @@ public class MySQL{
             }
         }
     }
-<<<<<<< HEAD
 
-
-
-}
-=======
-    //UPDATE STATEMENT(Farah)
-    public static void updateStatement(String updateStmt){
-
-    }
-
-
-
-            public void deleteRow(Integer id) {
-                String sql = "DELETE FROM tableName where id = ?";
-
-                try{
-                     PreparedStatement stmt = instance.prepareStatement(sql);
-                    // set the corresponding param
-                    stmt.setInt(1, id);
-                    // execute the delete statement
-                    stmt.executeUpdate();
-
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
-
-
-
-            public void deleteColumn( String column) {
+    public void deleteColumn( String column) {
                 String query = "ALTER TABLE tableName DROP column = ?";
                 try{
                     Statement stmt = instance.createStatement();
@@ -268,7 +254,7 @@ public class MySQL{
 
         }
 
-        public void renameTable() throws SQLException {
+       /*public void renameTable() throws SQLException {
             ResultSet result = null;
 
             String newTableName = result.getString("new_name");
@@ -283,7 +269,7 @@ public class MySQL{
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
-            }
+            }*/
 
             public void updateTable(Integer id){
                String query=" UPDATE tableName SET = ? = ? where id = ?" ;
@@ -295,13 +281,6 @@ public class MySQL{
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
-
-
-
             }
-
-
     }
 
-
->>>>>>> 4329446a53fecd87248f04608c847db7ca07ee7f
