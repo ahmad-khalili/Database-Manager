@@ -1,4 +1,4 @@
-package org.mmo.analyzer;
+/*package org.mmo.analyzer;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
@@ -72,4 +72,4 @@ public class CsvFileAnalyzer implements FileAnalyzer {
         }
     }
     
-}
+} */

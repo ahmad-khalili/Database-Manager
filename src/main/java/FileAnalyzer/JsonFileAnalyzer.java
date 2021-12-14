@@ -1,4 +1,4 @@
-package org.mmo.analyzer;
+/*package org.mmo.analyzer;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -75,4 +75,4 @@ public class JsonFileAnalyzer implements FileAnalyzer {
         }
     }
     
-}
+}*/
