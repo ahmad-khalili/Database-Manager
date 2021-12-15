@@ -1,53 +1,23 @@
-2021-12-14T16:51:11.944 [INFO] Successfully read profiles
-2021-12-14T16:51:13.022 [INFO] Successfully read profile
-2021-12-14T16:51:20.186 [INFO] Successfully read profiles
-2021-12-14T16:51:21.160 [INFO] Successfully read profile
-2021-12-14T16:51:22.160 [INFO] MySql connection created
-2021-12-14T16:51:23.989 [INFO] Closed Connection
-2021-12-14T17:55:01.918 [INFO] Successfully read profiles
-2021-12-14T17:55:03.669 [INFO] Successfully read profile
-2021-12-14T17:55:04.513 [INFO] MySql connection created
-2021-12-14T18:30:10.162 [INFO] Successfully read profiles
-2021-12-14T18:30:17.077 [INFO] Successfully read profile
-2021-12-14T18:30:20.573 [INFO] MySql connection created
-2021-12-14T18:30:30.830 [INFO] Closed Connection
-2021-12-14T20:03:18.621 [INFO] MySql connection created
-2021-12-14T20:03:23.332 [INFO] Closed Connection
-2021-12-14T20:04:50.776 [INFO] MySql connection created
-2021-12-14T20:04:52.392 [INFO] Closed Connection
-2021-12-14T20:05:32.320 [INFO] MySql connection created
-2021-12-14T20:05:33.540 [INFO] Closed Connection
-2021-12-14T20:06:10.898 [INFO] MySql connection created
-2021-12-14T20:06:12.154 [INFO] Closed Connection
-2021-12-14T20:06:46.837 [INFO] MySql connection created
-2021-12-14T20:06:47.936 [INFO] Closed Connection
-2021-12-14T20:07:24.928 [INFO] MySql connection created
-2021-12-14T20:07:25.600 [INFO] Closed Connection
-2021-12-14T20:08:18.882 [INFO] MySql connection created
-2021-12-14T20:08:19.538 [INFO] Closed Connection
-2021-12-14T20:08:54.140 [INFO] MySql connection created
-2021-12-14T20:08:55.594 [INFO] Closed Connection
-2021-12-14T20:11:07.691 [INFO] MySql connection created
-2021-12-14T20:11:10.145 [INFO] Closed Connection
-2021-12-14T20:24:41.044 [INFO] MySql connection created
-2021-12-14T20:24:42.091 [INFO] Closed Connection
-2021-12-14T20:25:06.054 [INFO] MySql connection created
-2021-12-14T20:25:06.664 [INFO] Closed Connection
-2021-12-14T20:40:19.375 [INFO] Successfully read profiles
-2021-12-14T20:40:20.240 [INFO] Successfully read profile
-2021-12-14T20:40:21.084 [INFO] MySql connection created
-2021-12-14T20:41:27.322 [INFO] Successfully read profiles
-2021-12-14T20:41:28.213 [INFO] Successfully read profile
-2021-12-14T20:41:29.229 [INFO] MySql connection created
-2021-12-14T20:52:52.620 [INFO] Successfully read profiles
-2021-12-14T20:52:53.042 [INFO] Successfully read profile
-2021-12-14T20:52:53.965 [INFO] MySql connection created
-2021-12-14T20:52:58.848 [INFO] Closed Connection
-2021-12-14T20:53:59.186 [INFO] Successfully read profiles
-2021-12-14T20:54:00.015 [INFO] Successfully read profile
-2021-12-14T20:54:00.937 [INFO] MySql connection created
-2021-12-14T20:54:04.319 [INFO] Closed Connection
-2021-12-14T21:00:43.816 [INFO] Successfully read profiles
-2021-12-14T21:00:44.817 [INFO] Successfully read profile
-2021-12-14T21:00:45.708 [INFO] MySql connection created
-2021-12-14T21:00:50.730 [INFO] Closed Connection
+2021-12-15T01:20:01.159 [INFO] Successfully read profiles
+2021-12-15T01:20:01.995 [INFO] Successfully read profile
+2021-12-15T01:20:02.882 [INFO] MySql connection created
+2021-12-15T01:20:09.755 [INFO] Successfully taken Snapshot
+2021-12-15T01:20:22.865 [INFO] Successfully read profiles
+2021-12-15T01:20:23.598 [INFO] Successfully read profile
+2021-12-15T01:20:24.261 [INFO] MySql connection created
+2021-12-15T01:20:32.775 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:20:34.834 [INFO] Successfully executed delete statement using Mysql
+2021-12-15T01:20:49.419 [INFO] Successfully read profiles
+2021-12-15T01:20:50.214 [INFO] Successfully read profile
+2021-12-15T01:20:51.129 [INFO] MySql connection created
+2021-12-15T01:20:57.820 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:21:09.861 [INFO] Successfully read profiles
+2021-12-15T01:21:10.545 [INFO] Successfully read profile
+2021-12-15T01:21:11.384 [INFO] MySql connection created
+2021-12-15T01:21:17.405 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:27:42.308 [INFO] Successfully read profiles
+2021-12-15T01:27:42.868 [INFO] Successfully read profile
+2021-12-15T01:27:43.571 [INFO] MySql connection created
+2021-12-15T01:27:47.092 [INFO] Successfully displayed tables from Mysql
+2021-12-15T01:28:27.349 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:29:00.027 [INFO] Successfully executed delete statement using Mysql

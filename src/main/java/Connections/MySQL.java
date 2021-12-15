@@ -27,7 +27,7 @@ public class MySQL{
                     + connectionInfo.dbName,connectionInfo.username, connectionInfo.password);
             return instance;
         }catch(Exception e){
-            System.out.println(e);
+            System.out.println(e.getMessage());
             return null;
         }
     }
@@ -47,6 +47,7 @@ public class MySQL{
 
                 String str = new String(buffer);
                 System.out.println(str);
+                System.out.println("Snapshot saved in C:\\Users\\ahmad\\Documents\\" + connectionInfo1.dbName +".sql\"");
             }
             else
             {
@@ -67,12 +68,12 @@ public class MySQL{
         }
     }
 
-    protected static void exportData(Connection connection){
+    protected static void exportData(){
         try {
             Process exec = Runtime.getRuntime().exec(new String[]{"cmd.exe","/c",
                     "\"C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqldump\" -u" +
                             connectionInfo1.username + " -p" +
-                            connectionInfo1.password + " " + connectionInfo1.dbName + " > C:\\Users\\ahmad\\Documents\\" + connectionInfo1.dbName +".sql"});
+                            connectionInfo1.password + " " + connectionInfo1.dbName + " > C:\\Users\\ahmad\\Documents\\" + connectionInfo1.dbName +".csv"});
             if(exec.waitFor()==0)
             {
                 //normally terminated, a way to read the output
@@ -117,6 +118,7 @@ public class MySQL{
 
                 String str = new String(buffer);
                 System.out.println(str);
+                System.out.println("Snapshot Restored Successfully");
             }
             else
             {
@@ -128,7 +130,7 @@ public class MySQL{
 
                 String str = new String(buffer);
                 System.out.println(str);
-
+                System.out.println("Snapshot Restoration Failed");
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -136,7 +138,6 @@ public class MySQL{
             e.printStackTrace();
         }
     }
-
 
         protected static void displayTables(){
         try {
@@ -182,7 +183,6 @@ public class MySQL{
             Statement stmt = instance.createStatement();
             // execute the delete statement
             stmt.executeUpdate(query);
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -196,21 +196,7 @@ public class MySQL{
             stmt.setInt(1, id);
             // execute the delete statement
             stmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public void deleteRow(Integer id) {
-        String sql = "DELETE FROM tableName where id = ?";
-
-        try{
-            PreparedStatement stmt = instance.prepareStatement(sql);
-            // set the corresponding param
-            stmt.setInt(1, id);
-            // execute the delete statement
-            stmt.executeUpdate();
-
+            System.out.println("Row Deleted");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -227,37 +213,36 @@ public class MySQL{
         }
     }
 
-    public void deleteColumn( String column) {
-                String query = "ALTER TABLE tableName DROP column = ?";
+    public void deleteColumn(String tableName ,String column) {
+                String query = "ALTER TABLE "+ tableName + " DROP column = ?";
                 try{
                     Statement stmt = instance.createStatement();
                     // set the corresponding param
                     // execute the delete statement
                     stmt.executeUpdate(query);
-
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
             }
 
-            public void deleteTable(){
-                String sql = "DROP TABLE tableName";
+            public static void deleteTable(String tableName){
+                String sql = "DROP TABLE " + tableName;
 
                 try{
                     Statement stmt = instance.createStatement();
                     // execute the delete statement
                     stmt.executeUpdate(sql);
-
+                    System.out.println(tableName + " was dropped");
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());
                 }
 
         }
 
-       /*public void renameTable() throws SQLException {
+       public void renameTable(String tableName, String newTableName) throws SQLException {
             ResultSet result = null;
 
-            String newTableName = result.getString("new_name");
+            //String newTableName = result.getString("new_name");
             String query= "RENAME TABLE tableName TO newTableName";
 
             try{
@@ -269,18 +254,6 @@ public class MySQL{
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
-            }*/
-
-            public void updateTable(Integer id){
-               String query=" UPDATE tableName SET = ? = ? where id = ?" ;
-                try{
-                    Statement stmt = instance.createStatement();
-                    // execute the delete statement
-                    stmt.executeUpdate(query);
-
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
             }
     }
 

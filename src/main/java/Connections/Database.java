@@ -84,7 +84,7 @@ public class Database{
 
     }
 
-    /*public static void editProfile(String id, String info){
+    public static void editProfile(String id, String info){
         File inputFile = new File("./Profiles.txt");
         try{
             Scanner in = new Scanner(inputFile);
@@ -100,7 +100,7 @@ public class Database{
             Logger.logError("Failed to read profile");
             System.out.println("FileNotFoundException: " + ex.getMessage());
         }
-    }*/
+    }
 
         public static Connection createConnection(String connectionType,ConnectionInfo connectionInfo){
         try {
@@ -146,6 +146,7 @@ public class Database{
     public static boolean executeInsertStmt(String connectionType, String insertStmt){
             if (connectionType.equals(ConnectionType.MySql)){
                 MySQL.executeInsertStmt(insertStmt);
+                Logger.logInfo("Successfully executed insert statement using Mysql");
                 return true;
             }
             return false;
@@ -154,24 +155,35 @@ public class Database{
     public static boolean executeDeleteStatement(String connectionType,String tableName, int id){
             if (connectionType.equals(ConnectionType.MySql)){
                 MySQL.deleteStatement(tableName, id);
+                Logger.logInfo("Successfully executed delete statement using Mysql");
                 return true;
             }
             return false;
     }
 
+    public static void executeDropStatement(String connectionType,String tableName){
+        if (connectionType.equals(ConnectionType.MySql)){
+            MySQL.deleteTable(tableName);
+            Logger.logInfo("Successfully executed drop statement using Mysql");
+        }
+    }
+
     public static void displayTables(String connectionType){
             if(connectionType.equals(ConnectionType.MySql)){
                 MySQL.displayTables();
+                Logger.logInfo("Successfully displayed tables from Mysql");
             }
     }
-    /*public static void exportData(String connectionType){
+    public static void exportData(String connectionType){
         if (connectionType.equals(ConnectionType.MySql)){
             MySQL.exportData();
+            Logger.logInfo("Successfully exported data from Mysql");
         }
-    }*/
+    }
     public static void executeSelectStatement(String connectionType, String tableName){
         if (connectionType.equals(ConnectionType.MySql)){
             MySQL.selectStatement(tableName);
+            Logger.logInfo("Successfully executed select statement using Mysql");
         }
     }
 }

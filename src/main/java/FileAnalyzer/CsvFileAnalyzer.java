@@ -1,25 +1,30 @@
-/*package org.mmo.analyzer;
+/*package FileAnalyzer;
 
+import Connections.ConnectionInfo;
+import Constants.ConnectionType;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-import org.mmo.db.DatabaseManager;
+import Connections.Database;
 
 import java.io.*;
+import java.sql.Connection;
 import java.util.List;
 import java.util.StringJoiner;
 
 public class CsvFileAnalyzer implements FileAnalyzer {
     
-    private final DatabaseManager databaseManager;
+    private final Connection database;
+    ConnectionInfo connectionInfo = new ConnectionInfo("root","0000","3306","dbms");
     
-    public CsvFileAnalyzer(DatabaseManager databaseManager) {
-        this.databaseManager = databaseManager;
+    public CsvFileAnalyzer(Connection database) {
+        this.database = database;
     }
-    
+
+
     @Override
     public long analyseFile(File file, String tableName) {
         long rowsInserted = 0;
-        databaseManager.connect();
+        database = Database.createConnection(ConnectionType.MySql, connectionInfo);
         
         try (
                 FileWriter fileWriter = new FileWriter(new File("D:\\My_Work_Area\\DatabaseManager\\test\\test.sql"))
@@ -30,7 +35,7 @@ public class CsvFileAnalyzer implements FileAnalyzer {
             records.remove(0);
             for (String[] recordFields : records) {
                 String insertStmt = getTableInsertStmt(tableName, columnsNamesPart, recordFields);
-                boolean insertOperationResult = databaseManager.executeInsertStmt(insertStmt);
+                boolean insertOperationResult = database.executeInsertStmt(insertStmt);
                 if (insertOperationResult) {
                     writeExecutedSqlStatementsIntoFile(fileWriter, insertStmt);
                     rowsInserted++;
@@ -43,8 +48,8 @@ public class CsvFileAnalyzer implements FileAnalyzer {
         } catch (CsvException e) {
             e.printStackTrace();
         } finally {
-            databaseManager.closeStatement();
-            databaseManager.closeConnection();
+            database.closeStatement();
+            database.closeConnection();
         }
         
         return rowsInserted;
@@ -72,4 +77,4 @@ public class CsvFileAnalyzer implements FileAnalyzer {
         }
     }
     
-} */
+}*/
