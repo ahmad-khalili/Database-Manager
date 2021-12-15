@@ -2,7 +2,7 @@ package Connections;
 
 import java.sql.*;
 
-public class SQLite {
+public class SQLite{
     protected static Connection instance;
     protected static Connection getInstance(ConnectionInfo connectionInfo){
         try{

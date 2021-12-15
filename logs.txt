@@ -1,0 +1,23 @@
+2021-12-15T01:20:01.159 [INFO] Successfully read profiles
+2021-12-15T01:20:01.995 [INFO] Successfully read profile
+2021-12-15T01:20:02.882 [INFO] MySql connection created
+2021-12-15T01:20:09.755 [INFO] Successfully taken Snapshot
+2021-12-15T01:20:22.865 [INFO] Successfully read profiles
+2021-12-15T01:20:23.598 [INFO] Successfully read profile
+2021-12-15T01:20:24.261 [INFO] MySql connection created
+2021-12-15T01:20:32.775 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:20:34.834 [INFO] Successfully executed delete statement using Mysql
+2021-12-15T01:20:49.419 [INFO] Successfully read profiles
+2021-12-15T01:20:50.214 [INFO] Successfully read profile
+2021-12-15T01:20:51.129 [INFO] MySql connection created
+2021-12-15T01:20:57.820 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:21:09.861 [INFO] Successfully read profiles
+2021-12-15T01:21:10.545 [INFO] Successfully read profile
+2021-12-15T01:21:11.384 [INFO] MySql connection created
+2021-12-15T01:21:17.405 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:27:42.308 [INFO] Successfully read profiles
+2021-12-15T01:27:42.868 [INFO] Successfully read profile
+2021-12-15T01:27:43.571 [INFO] MySql connection created
+2021-12-15T01:27:47.092 [INFO] Successfully displayed tables from Mysql
+2021-12-15T01:28:27.349 [INFO] Successfully executed select statement using Mysql
+2021-12-15T01:29:00.027 [INFO] Successfully executed delete statement using Mysql

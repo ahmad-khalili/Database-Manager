@@ -9,5 +9,8 @@
         <module name="DBManager" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DBManager" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
