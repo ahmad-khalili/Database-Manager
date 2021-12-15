@@ -204,6 +204,17 @@ public void updateStatement(Integer id){
 
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
+		public static void selectStatement(String tableName){
+        try {
+            PreparedStatement ps = instance.prepareStatement("SELECT * from " + tableName);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                System.out.println(rs.getString(1));
+            }
+        }
+        catch (SQLException ex) {
+            ex.printStackTrace();
+        }
 ```
 - Finally, the "closeConnection()" method was added to make sure that no connections were kept in the background when the users request to end the session. Each connection type has the "closeConnection()" method which are handled by the factory class "Database".
 ```ruby
